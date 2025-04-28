@@ -236,11 +236,3 @@ def build_delete_keyboard(chat_id, selected):
 
 
     return InlineKeyboardMarkup(keyboard)
-
-
-
-async def clear_list(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = update.effective_chat.id
-
-    clear_items(chat_id)
-    await update.message.reply_text(get_text(chat_id, "cleared"))

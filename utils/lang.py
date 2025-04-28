@@ -8,10 +8,7 @@ TEXTS = {
         "choose_language": "🌐 Please choose your language:",
         "language_selected": "✅ Language selected successfully!",
         "start_message": "👋 Welcome! I'm your shopping assistant.",
-        "prompt_add_item": "📥 What would you like to add?",
-        "error_adding": "Error adding item:",
         "list_title": "Shared Shopping List:",
-        "invalid_numbers": "❗ No valid numbers detected. Please try again.",
         "nothing_deleted": "No items were deleted.",
         "cleared": "✅ The shopping list was cleared!",
         "current_reminder": "Current reminder: every {} days.",
@@ -23,11 +20,8 @@ TEXTS = {
         "already_exists": "⚠️ This item already exists in your list.",
         "added_successfully": "has been successfully added!",
         "invalid_items": "❗ Invalid input. Please send the item names.",
-        "choose_numbers_to_delete": "🗑️ Send the item number(s) you want to delete!",
-  "empty_list": "📭 Your shopping list is empty.",
         "choose_item_to_delete": "🗑 Choose an item to delete:",
                 "choose_suggested_items": "🛒 Choose suggested items to add:",
-        "edit_list_title": "🛒 Please choose an item to edit:",
 "add_selected_items": "➕ Add selected items",
         "added_to_list": "✅ Added to list:",
         "confirm_update": "✅ Update",
@@ -41,17 +35,13 @@ TEXTS = {
 "confirm_multi_delete": "🗑️ Delete selected items",
 "multi_items_deleted": "✅ Selected items deleted successfully!",
 "clear_all_list": "🗑️ Clear Entire List",
-"cleared": "✅ Your shopping list has been cleared!"
 
     },
     "he": {
         "choose_language": "🌐 אנא בחר שפה:",
         "language_selected": "✅ השפה עודכנה בהצלחה!",
         "start_message": "👋 שלום! אני עוזר הקניות שלך.",
-        "prompt_add_item": "📥 מה תרצה להוסיף?",
-        "error_adding": "שגיאה בהוספת פריט:",
         "list_title": "רשימת הקניות המשותפת:",
-        "invalid_numbers": "❗ לא זוהו מספרים תקינים. נסה שוב.",
         "nothing_deleted": "לא נמחקו פריטים.",
         "cleared": "✅ הרשימה נוקתה בהצלחה!",
         "current_reminder": "תזכורת נוכחית: כל {} ימים.",
@@ -63,14 +53,11 @@ TEXTS = {
         "added_successfully": "נוסף בהצלחה!",
         "invalid_items": "❗ קלט לא תקין. שלח שמות פריטים.",
         "invalid_reminder": "❗ נא לשלוח מספר בין 1 ל־30.",
-        "choose_numbers_to_delete": "🗑️ שלח את המספרים שברצונך למחוק!",
-             "empty_list": "📭 הרשימה שלך ריקה.",
         "choose_item_to_delete": "🗑 בחר פריט למחיקה:",
                 "choose_suggested_items": "🛒 בחר פריטים מומלצים להוספה:",
     "add_selected_items": "➕ הוסף פריטים שנבחרו",
         "added_to_list": "✅ נוספו לרשימה:",
         "confirm_update": "✅ עדכן",
-        "edit_list_title": "🛒 בחר פריט לעריכה:",
          "bulk_edit_title": "🛒 עריכת רשימת קניות:\nבחרי פריט ועדכני את הכמות והיחידה",
         "updated_successfully": "✅ עודכן בהצלחה!",
         "choose_items_to_delete": "🛒 בחר פריטים למחיקה:",
@@ -81,7 +68,6 @@ TEXTS = {
 "confirm_multi_delete": "🗑️ מחק פריטים שנבחרו",
 "multi_items_deleted": "✅ כל הפריטים שנבחרו נמחקו בהצלחה!",
 "clear_all_list": "🗑️ נקה את כל הרשימה",
-"cleared": "✅ רשימת הקניות שלך נוקתה!"
 
 
 

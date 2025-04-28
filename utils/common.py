@@ -46,9 +46,6 @@ def translate_unit(unit: str, chat_id: int) -> str:
 
 
 
-    
-    
-    
 # utils/common.py
 
 def format_item_display(item_row, chat_id: int) -> str:

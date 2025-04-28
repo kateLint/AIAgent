@@ -1,13 +1,18 @@
 shopping_bot/
+│
 ├── main.py
-├── db.py
 ├── handlers/
-│   ├── start.py
-│   ├── shopping.py
+│   ├── add.py
+│   ├── delete.py
+│   ├── edit.py
+│   ├── list.py
+│   ├── suggest.py
 │   ├── reminder.py
-│   ├── callbacks.py
+│   └── callback.py
 ├── utils/
-│   ├── lang.py
-│   ├── misc.py
-├── shopping_list.db
-└── requirements.txt
+│   ├── common.py
+│   ├── db.py
+│   └── lang.py
+├── bot_data (נוצר אוטומטית - persistence)
+├── shopping_list.db (קובץ SQLite)
+├── README.md 
