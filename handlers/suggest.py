@@ -39,8 +39,7 @@ async def handle_suggest_callback(update, context):
 
         context.user_data["selected_suggested_items"] = []
         if added:
-            formatted = [f"- {name}" for name in added]
-            await query.edit_message_text(f"{get_text(chat_id, 'added_to_list')}\n" + "\n".join(formatted))
+            await query.edit_message_text(get_text(chat_id, "updated_successfully") + "\n" + "\n".join(f"- {name}" for name in added))
         else:
             await query.edit_message_text(get_text(chat_id, "no_items_added"))
 
