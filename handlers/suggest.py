@@ -108,7 +108,7 @@ async def send_suggest_buttons(update: Update, context: ContextTypes.DEFAULT_TYP
 
     # תמיד נוסיף כפתור "עריכה ✏️" שמחליף מצב
     keyboard.append([
-        InlineKeyboardButton(get_text(chat_id,"edit_item") if not context.user_data["suggest_edit_mode"] else "updated_successfully", callback_data="edit_suggest_toggle")
+        InlineKeyboardButton(get_text(chat_id,"edit_item") if not context.user_data["suggest_edit_mode"] else get_text(chat_id,"updated_successfully"), callback_data="edit_suggest_toggle")
     ])
 
     reply_markup = InlineKeyboardMarkup(keyboard)
