@@ -55,12 +55,14 @@ async def handle_add(update: Update, context: ContextTypes.DEFAULT_TYPE):
         else:
             db.add_item(chat_id, item_name, quantity=1, unit=DEFAULT_UNIT)
             added.append(item_name)
-
-    response = ""
+ 
     if added:
-        response += "✅ Added:\n" + "\n".join(f"- {i}" for i in added) + "\n"
+        added_items = "\n".join(f"- {i}" for i in added)
+        response += _( "response_added" ).format(items=added_items) + "\n"
+
     if skipped:
-        response += "⚠️ Already exist:\n" + "\n".join(f"- {i}" for i in skipped)
+        skipped_items = "\n".join(f"- {i}" for i in skipped)
+        response += _( "response_skipped" ).format(items=skipped_items)   
 
     await update.message.reply_text(response.strip())
     context.user_data.pop("mode", None)

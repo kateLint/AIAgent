@@ -49,7 +49,7 @@ async def handle_suggest_callback(update, context):
         fav_id = int(data.split(":")[1])
         context.user_data["mode"] = "awaiting_edit_fav"
         context.user_data["edit_fav_id"] = fav_id
-        await query.edit_message_text(f"✏️ כתוב את השם החדש לפריט:")
+        await query.edit_message_text(f"add_new_item_name")
 
     # 🗑 מחיקת מוצר
     elif data.startswith("delete_fav:"):
@@ -60,7 +60,7 @@ async def handle_suggest_callback(update, context):
     # ➕ הוספת מוצר חדש
     elif data == "add_fav":
         context.user_data["mode"] = "awaiting_add_fav"
-        await query.edit_message_text(f"➕ כתוב את שם המוצר החדש להוספה:")
+        await query.edit_message_text(f"add_new_name")
 
     # 📝 החלפת מצב עריכה
     elif data == "edit_suggest_toggle":
@@ -103,12 +103,12 @@ async def send_suggest_buttons(update: Update, context: ContextTypes.DEFAULT_TYP
     # אם במצב עריכה נוסיף כפתור "➕ הוסף מוצר חדש"
     if context.user_data["suggest_edit_mode"]:
         keyboard.append([
-            InlineKeyboardButton("➕ הוסף מוצר חדש", callback_data="add_fav")
+            InlineKeyboardButton("command_add", callback_data="add_fav")
         ])
 
     # תמיד נוסיף כפתור "עריכה ✏️" שמחליף מצב
     keyboard.append([
-        InlineKeyboardButton("📝 עריכה" if not context.user_data["suggest_edit_mode"] else "✅ סיים עריכה", callback_data="edit_suggest_toggle")
+        InlineKeyboardButton("edit_item" if not context.user_data["suggest_edit_mode"] else "updated_successfully", callback_data="edit_suggest_toggle")
     ])
 
     reply_markup = InlineKeyboardMarkup(keyboard)

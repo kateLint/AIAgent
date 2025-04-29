@@ -14,30 +14,7 @@ async def handle_general_callback(update: Update, context: ContextTypes.DEFAULT_
 
     logging.debug(f"General callback received: {data} from chat {chat_id}")
 
-    if data == "show_help":
-        await query.edit_message_text(
-            text=get_text(chat_id, "commands"),
-            parse_mode="Markdown"
-        )
-
-    elif data == "edit_info":
-        await query.edit_message_text(
-            text="""✏️ *Editing Instructions:*
-
-- Use numbers or names.
-- Example: `1 2, 3 4` or `Sugar 2, Milk 1`
-- Always provide a quantity after the item!
-""",
-            parse_mode="Markdown"
-        )
-
-    elif data == "back_to_menu":
-        await query.edit_message_text(
-            text=get_text(chat_id, "start_message"),
-            parse_mode="Markdown"
-        )
-
-    elif data.startswith("lang_"):
+    if data.startswith("lang_"):
         lang_code = data.split("_")[1]
 
         set_language(chat_id, lang_code)
