@@ -39,7 +39,7 @@ async def handle_suggest_callback(update, context):
 
         context.user_data["selected_suggested_items"] = []
         if added:
-            await query.edit_message_text(get_text(chat_id, "updated_successfully") + "\n" + "\n".join(f"- {name}" for name in added))
+            await query.edit_message_text(get_text(chat_id, "updated_successfully" + "\n" + "\n".join(f"- {name}" for name in added)))
         else:
             await query.edit_message_text(get_text(chat_id, "no_items_added"))
 
@@ -49,7 +49,7 @@ async def handle_suggest_callback(update, context):
         fav_id = int(data.split(":")[1])
         context.user_data["mode"] = "awaiting_edit_fav"
         context.user_data["edit_fav_id"] = fav_id
-        await query.edit_message_text(f"add_new_item_name")
+        await query.edit_message_text(get_text(chat_id,"add_new_item_name"))
 
     # 🗑 מחיקת מוצר
     elif data.startswith("delete_fav:"):
@@ -60,7 +60,7 @@ async def handle_suggest_callback(update, context):
     # ➕ הוספת מוצר חדש
     elif data == "add_fav":
         context.user_data["mode"] = "awaiting_add_fav"
-        await query.edit_message_text(f"add_new_name")
+        await query.edit_message_text(get_text(chat_id,"add_new_name"))
 
     # 📝 החלפת מצב עריכה
     elif data == "edit_suggest_toggle":
