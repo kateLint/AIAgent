@@ -3,12 +3,14 @@
 A smart, multilingual shopping assistant for Telegram groups and individuals!
 
 ## Features
+- show list
 - ➕ Add items to shared shopping lists
 - 🗑️ Delete items with multi-select
 - ✏️ Bulk edit quantities and units
-- 💡 Suggest basic groceries
+- 💡 Suggest basic groceries, with edit, remove and adding options
 - ⏰ Set reminders to update the list
-- 🌐 Supports English 🇺🇸 and Hebrew 🇮🇱
+- 🌐 Supports English 🇺🇸 , Hebrew 🇮🇱 , Russian 🇷🇺
+
 
 ## Technologies
 - Python 3.10+
@@ -33,9 +35,6 @@ python main.py
 
 
 Future Improvements
-Add cloud database support (e.g., PostgreSQL)
-
-Expand languages
 
 Dynamic product suggestions based on past behavior
 
